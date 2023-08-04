@@ -115,7 +115,7 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     place-items: center;
-    transform: translateZ(11rem);
+    transform: translateZ(12rem);
 }
 
 .rate-btn {
@@ -149,7 +149,7 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
-    transform: translateZ(12rem);
+    transform: translateZ(10rem);
     transition: color 200ms;
 }
 
@@ -208,7 +208,7 @@ body {
     padding: 1rem 2.5rem;
     color: var(--orange);
     border-radius: 40px;
-    transform: translateZ(10rem);
+    transform: translateZ(12rem);
 }
 
 .thank__text__title {
@@ -216,7 +216,7 @@ body {
     color: var(--white);
     font-size: 2.5rem;
     font-weight: 600;
-    transform: translateZ(11rem);
+    transform: translateZ(10rem);
 }
 
 .thank__text__body {
@@ -224,7 +224,7 @@ body {
     font-size: 1.4rem;
     line-height: 2rem;
     text-align: center;
-    transform: translateZ(12rem);
+    transform: translateZ(10rem);
 }
 
 /* FOOTER */
