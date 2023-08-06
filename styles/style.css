@@ -23,6 +23,7 @@ body {
 /* VARIABLES */
 
 :root {
+    /* Color */
     --orange:  hsl(25, 97%, 53%);
     --white: hsl(0, 0%, 100%);
     --light-grey: hsl(217, 12%, 63%);
@@ -30,6 +31,11 @@ body {
     --blue: hsl(215, 25%, 13%);
     --dark-blue: hsl(213, 19%, 18%);
     --very-dark-blue: hsl(216, 12%, 8%);
+
+    /* Font */
+    --space: clamp(29.1rem, calc(29.1rem + 10vw), 54rem);
+    --space-s: clamp(1.4rem, calc(1.4rem + 0.98vw), 2.5rem);
+    --space-heading-s: clamp(2.5rem, calc(2.5rem + 1.79vw), 4.5rem);
 }
 
 
@@ -50,11 +56,13 @@ body {
     background-color: var(--blue);
     width: 85%;
     height: 60%;
+    /* width: var(--space); */
     padding: 4%;
     border-radius: 20px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
+    aspect-ratio: 3/4;
     transform-style: preserve-3d;
     transition: transform 2000ms ease-in-out;
 }
@@ -102,12 +110,14 @@ body {
 .text__title {
     color: var(--white);
     font-size: 2.5rem;
+    /* font-size: var(--space-heading-s); */
     font-weight: 600;
 }
 
 .text__body {
     color: var(--light-grey);
     font-size: 1.4rem;
+    /* font-size: var(--space-s); */
     line-height: 2rem;
 }
 
@@ -121,6 +131,7 @@ body {
 .rate-btn {
     color: var(--light-grey);
     font-size: 1.4rem;
+    /* font-size: var(--space-s); */
     font-weight: 700;
     border: none;
     transition: color 200ms;
@@ -145,6 +156,7 @@ body {
     border-radius: 40px;
     color: var(--white);
     font-size: 1.4rem;
+    /* font-size: var(--space-s); */
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -204,6 +216,7 @@ body {
     background-color: var(--dark-blue);
     width: max-content;
     font-size: 1.4rem;
+    /* font-size: var(--space-s); */
     text-align: center;
     padding: 1rem 2.5rem;
     color: var(--orange);
@@ -215,6 +228,7 @@ body {
     margin: 0 auto;
     color: var(--white);
     font-size: 2.5rem;
+    /* font-size: var(--space-heading-s); */
     font-weight: 600;
     transform: translateZ(8rem);
 }
@@ -222,6 +236,7 @@ body {
 .thank__text__body {
     color: var(--light-grey);
     font-size: 1.4rem;
+    /* font-size: var(--space-s); */
     line-height: 2rem;
     text-align: center;
     transform: translateZ(8rem);
