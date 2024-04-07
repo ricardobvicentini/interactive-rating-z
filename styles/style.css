@@ -52,8 +52,8 @@ body {
 .wrapper-rating {
   position: absolute;
   background-color: var(--blue);
-  width: 50%;
-  height: 60%;
+  width: 40%;
+  height: 50%;
   /* width: var(--space); */
   padding: 4%;
   border-radius: 20px;
