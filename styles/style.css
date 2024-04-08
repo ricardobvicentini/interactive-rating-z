@@ -12,10 +12,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
   font-family: 'Overpass', sans-serif;
 }
@@ -33,11 +29,14 @@ body {
   --very-dark-blue: hsl(216, 12%, 8%);
 
   /* Font */
-  --f-title: clamp(3rem, 2.295774647887324rem + 3.004694835680751vw, 5rem);
-  --f-text: clamp(1.4rem, 1.012676056338028rem + 1.6525821596244135vw, 2.5rem);
+  --f-title-l: 3rem;
+  --f-title-s: 1.25rem;
+  --f-text-l: 1.5rem;
+  --f-text-s: 0.75rem;
 }
 
 .container {
+  border: 1px solid red;
   position: relative;
   width: 100vw;
   height: 100svh;
@@ -50,17 +49,17 @@ body {
 /* RATING CARD */
 
 .wrapper-rating {
+  border: 1px solid red;
   position: absolute;
   background-color: var(--blue);
-  width: 40%;
-  height: 50%;
-  /* width: var(--space); */
-  padding: 4%;
+  background-image: linear-gradient(to bottom, var(--dark-blue), var(--blue));
+  width: 40rem;
+  height: 40rem;
+  padding: 3rem;
   border-radius: 20px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
-  aspect-ratio: 3/4;
+  justify-content: space-between;
   transform-style: preserve-3d;
   transition: transform 1500ms ease-in-out;
 }
@@ -74,27 +73,42 @@ body {
   right: var(--space);
   bottom: var(--space);
   border: 4px solid var(--blue);
+  /* border-image: linear-gradient(var(--dark-blue), var(--blue)); */
   border-radius: 20px;
   transform: translateZ(5rem);
 }
 
 .rating--sh {
+  border: 1px solid red;
   transform: rotateY(180deg);
 }
 
 .wrapper-rating__text {
-  height: 50%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  border: 1px solid red;
   transform: translateZ(8rem);
+
+  .text__title {
+    border: 1px solid red;
+    color: var(--white);
+    font-size: var(--f-title-l);
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .text__body {
+    border: 1px solid red;
+    color: var(--light-grey);
+    font-size: var(--f-text-l);
+    line-height: 1.5;
+  }
 }
 
 .text__image,
 .rate-btn {
+  border: 1px solid red;
   background-color: var(--dark-blue);
-  width: 4rem;
-  height: 4rem;
+  width: 4.5rem;
+  height: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,32 +116,21 @@ body {
 }
 
 .text__image img {
-  width: 35%;
-}
-
-.text__title {
-  color: var(--white);
-  font-size: var(--f-title);
-  font-weight: 600;
-}
-
-.text__body {
-  color: var(--light-grey);
-  font-size: var(--f-text);
-  line-height: 1.2;
+  border: 1px solid red;
+  width: 40%;
 }
 
 .wrapper-rating__rate {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  place-items: center;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
   transform: translateZ(10rem);
 }
 
 .rate-btn {
+  border: 1px solid red;
   color: var(--light-grey);
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: var(--f-text-l);
   border: none;
   transition: color 200ms;
 }
@@ -145,13 +148,12 @@ body {
 
 .btn {
   width: 100%;
-  height: 14%;
+  height: 4rem;
   background-color: var(--orange);
   border: none;
   border-radius: 40px;
   color: var(--white);
   font-size: 1.4rem;
-  /* font-size: var(--space-s); */
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -169,13 +171,16 @@ body {
 /* THANK YOU CARD */
 
 .wrapper-thank__text {
+  border: 1px solid red;
   position: absolute;
-  height: 100%;
+  top: 0;
+  width: 40rem;
+  height: 40rem;
+  padding: 3rem;
   align-self: center;
-  padding-block: 1rem;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transform: rotateY(180deg);
@@ -210,8 +215,7 @@ body {
   margin: 0 auto;
   background-color: var(--dark-blue);
   width: max-content;
-  font-size: 1.4rem;
-  /* font-size: var(--space-s); */
+  font-size: var(--f-text);
   text-align: center;
   padding: 1rem 2.5rem;
   color: var(--orange);
@@ -222,8 +226,7 @@ body {
 .thank__text__title {
   margin: 0 auto;
   color: var(--white);
-  font-size: 2.5rem;
-  /* font-size: var(--space-heading-s); */
+  font-size: var(--f-title-l);
   font-weight: 600;
   transform: translateZ(8rem);
 }
