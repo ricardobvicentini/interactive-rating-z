@@ -37,8 +37,8 @@ body {
   /* Size */
   --wrapper-w-l: 40rem;
   --wrapper-h-l: 40rem;
-  --wrapper-w-s:
-  --wrapper-h-s:
+  --wrapper-w-s: 30rem;
+  --wrapper-h-s: 30rem;
 }
 
 .container {
@@ -47,7 +47,7 @@ body {
   width: 100vw;
   height: 100svh;
   background-color: var(--very-dark-blue);
-  background-color: beige;
+  /* background-color: beige; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,8 +58,8 @@ body {
 .wrapper-rating {
   border: 1px solid red;
   position: absolute;
-  background-color: var(--blue);
   background-image: linear-gradient(to bottom, var(--dark-blue), var(--blue));
+  /* background-color: blue; */
   width: var(--wrapper-w-l);
   height: var(--wrapper-h-l);
   padding: 3rem;
@@ -79,11 +79,13 @@ body {
   left: var(--space);
   right: var(--space);
   bottom: var(--space);
-  border: 4px solid var(--blue);
-  /* border-image: linear-gradient(var(--dark-blue), var(--blue)); */
+  border: 5px solid var(--dark-blue);
+  /* border: 5px solid transparent;
+  border-image: linear-gradient(to bottom, var(--dark-blue), var(--blue)) 1; */
   border-radius: 20px;
   transform: translateZ(5rem);
-  display: none;
+  opacity: var(--opac, 0);
+  transition: opacity 500ms ease-in-out;
 }
 
 .rating--sh {
@@ -186,6 +188,7 @@ body {
   width: var(--wrapper-w-l);
   height: var(--wrapper-h-l);
   padding: 3rem;
+  border-radius: 20px;
   align-self: center;
   display: flex;
   flex-flow: column nowrap;
@@ -203,13 +206,15 @@ body {
   left: var(--space);
   right: var(--space);
   bottom: var(--space);
-  border: 4px solid var(--blue);
+  border: 5px solid var(--dark-blue);
   border-radius: 20px;
   transform: translateZ(5rem);
-  display: none;
+  opacity: var(--opac, 0);
+  transition: opacity 500ms ease-in-out;
 }
 
 .thank__text__image {
+  border: 1px solid red;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -219,6 +224,7 @@ body {
 
 .thank__text__image img {
   display: block;
+  width: 15rem;
 }
 
 .thank__text__score {
@@ -242,12 +248,19 @@ body {
 }
 
 .thank__text__body {
+  border: 1px solid red;
   color: var(--light-grey);
-  font-size: 1.4rem;
+  font-size: var(--f-text-l);
   /* font-size: var(--space-s); */
   line-height: 2rem;
   text-align: center;
   transform: translateZ(8rem);
+}
+
+/* Utility */
+
+.active {
+  display: block;
 }
 
 /* FOOTER */
