@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: relative;
   width: 100vw;
   height: 100svh;
@@ -56,9 +56,13 @@ body {
 /* RATING CARD */
 
 .wrapper-rating {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: absolute;
-  background-image: linear-gradient(to bottom, var(--dark-blue), var(--blue));
+  background-image: linear-gradient(
+    to bottom,
+    var(--dark-blue),
+    var(--blue) 30%
+  );
   /* background-color: blue; */
   width: var(--wrapper-w-l);
   height: var(--wrapper-h-l);
@@ -68,7 +72,7 @@ body {
   flex-flow: column nowrap;
   justify-content: space-between;
   transform-style: preserve-3d;
-  transition: transform 1500ms ease-in-out;
+  transition: transform 1800ms ease-in-out;
 }
 
 .wrapper-rating::before {
@@ -85,20 +89,20 @@ body {
   border-radius: 20px;
   transform: translateZ(5rem);
   opacity: var(--opac, 0);
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 600ms ease-in-out;
 }
 
 .rating--sh {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   transform: rotateY(180deg);
 }
 
 .wrapper-rating__text {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   transform: translateZ(8rem);
 
   .text__title {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color: var(--white);
     font-size: var(--f-title-l);
     font-weight: 600;
@@ -106,7 +110,7 @@ body {
   }
 
   .text__body {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color: var(--light-grey);
     font-size: var(--f-text-l);
     line-height: 1.5;
@@ -115,7 +119,7 @@ body {
 
 .text__image,
 .rate-btn {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-color: var(--dark-blue);
   width: 4.5rem;
   height: 4.5rem;
@@ -126,19 +130,19 @@ body {
 }
 
 .text__image img {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 40%;
 }
 
 .wrapper-rating__rate {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   transform: translateZ(10rem);
 }
 
 .rate-btn {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   color: var(--light-grey);
   font-size: var(--f-text-l);
   border: none;
@@ -181,8 +185,12 @@ body {
 /* THANK YOU CARD */
 
 .wrapper-thank__text {
-  border: 1px solid red;
-  background-image: linear-gradient(to bottom, var(--dark-blue), var(--blue));
+  /* border: 1px solid red; */
+  background-image: linear-gradient(
+    to bottom,
+    var(--dark-blue),
+    var(--blue) 30%
+  );
   position: absolute;
   top: 0;
   width: var(--wrapper-w-l);
@@ -210,11 +218,11 @@ body {
   border-radius: 20px;
   transform: translateZ(5rem);
   opacity: var(--opac, 0);
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 
 .thank__text__image {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -248,19 +256,12 @@ body {
 }
 
 .thank__text__body {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   color: var(--light-grey);
   font-size: var(--f-text-l);
-  /* font-size: var(--space-s); */
-  line-height: 2rem;
+  line-height: 1.5;
   text-align: center;
   transform: translateZ(8rem);
-}
-
-/* Utility */
-
-.active {
-  display: block;
 }
 
 /* FOOTER */

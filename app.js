@@ -6,6 +6,10 @@ const ratingMsg = document.getElementById('rate-msg');
 
 btn.addEventListener('click', () => {
   rating.style.setProperty('--opac', 1);
+  setTimeout(() => {
+    rating.style.setProperty('--opac', 0);
+  }, 1100);
+
   rating.classList.add('rating--sh');
   if (!document.querySelector('.rate-btn.checked')) {
     score.innerHTML = 'No rating?';
