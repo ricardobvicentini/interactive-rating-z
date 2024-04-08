@@ -33,6 +33,12 @@ body {
   --f-title-s: 1.25rem;
   --f-text-l: 1.5rem;
   --f-text-s: 0.75rem;
+
+  /* Size */
+  --wrapper-w-l: 40rem;
+  --wrapper-h-l: 40rem;
+  --wrapper-w-s:
+  --wrapper-h-s:
 }
 
 .container {
@@ -54,8 +60,8 @@ body {
   position: absolute;
   background-color: var(--blue);
   background-image: linear-gradient(to bottom, var(--dark-blue), var(--blue));
-  width: 40rem;
-  height: 40rem;
+  width: var(--wrapper-w-l);
+  height: var(--wrapper-h-l);
   padding: 3rem;
   border-radius: 20px;
   display: flex;
@@ -77,6 +83,7 @@ body {
   /* border-image: linear-gradient(var(--dark-blue), var(--blue)); */
   border-radius: 20px;
   transform: translateZ(5rem);
+  display: none;
 }
 
 .rating--sh {
@@ -176,13 +183,13 @@ body {
   background-image: linear-gradient(to bottom, var(--dark-blue), var(--blue));
   position: absolute;
   top: 0;
-  width: 40rem;
-  height: 40rem;
+  width: var(--wrapper-w-l);
+  height: var(--wrapper-h-l);
   padding: 3rem;
   align-self: center;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transform: rotateY(180deg);
@@ -199,6 +206,7 @@ body {
   border: 4px solid var(--blue);
   border-radius: 20px;
   transform: translateZ(5rem);
+  display: none;
 }
 
 .thank__text__image {
@@ -217,7 +225,7 @@ body {
   margin: 0 auto;
   background-color: var(--dark-blue);
   width: max-content;
-  font-size: var(--f-text);
+  font-size: var(--f-text-l);
   text-align: center;
   padding: 1rem 2.5rem;
   color: var(--orange);
