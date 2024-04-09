@@ -137,13 +137,13 @@ body {
   display: flex;
   justify-content: space-between;
   transform: translateZ(10rem);
-}
-
-.rate-btn {
-  color: var(--light-grey);
-  font-size: var(--f-text);
-  border: none;
-  transition: color 200ms;
+  & .rate-btn {
+    color: var(--light-grey);
+    font-size: var(--f-text);
+    border: none;
+    transition: color 200ms;
+    cursor: pointer;
+  }
 }
 
 .checked {
