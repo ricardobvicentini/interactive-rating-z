@@ -5,12 +5,18 @@ const score = document.querySelector('.thank__text__score');
 const ratingMsg = document.getElementById('rate-msg');
 const resetOver = document.querySelector('.overlay');
 
-btn.addEventListener('click', () => {
+function resetOpacity() {
   rating.style.setProperty('--opac', 1);
   setTimeout(() => {
     rating.style.setProperty('--opac', 0);
-    resetOver.style.setProperty('display', 'block');
   }, 1100);
+}
+
+btn.addEventListener('click', () => {
+  resetOpacity();
+  setTimeout(() => {
+    resetOver.style.setProperty('display', 'block');
+  }, 1800);
 
   rating.classList.add('rating--sh');
   if (!document.querySelector('.rate-btn.checked')) {
@@ -28,6 +34,7 @@ ratingBtns.forEach((ratingBtn) => {
 });
 
 resetOver.onclick = () => {
+  resetOpacity();
   rating.classList.remove('rating--sh');
   resetOver.style.setProperty('display', 'none');
   ratingBtns.forEach((ratingBtn) => {
