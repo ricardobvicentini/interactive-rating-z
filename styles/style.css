@@ -285,6 +285,15 @@ body {
   text-decoration: underline;
 }
 
+.overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
 /* MEDIA */
 
 @media (width < 32.7em) {
