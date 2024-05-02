@@ -14,6 +14,16 @@ btn.addEventListener('click', () => {
   if (!document.querySelector('.rate-btn.checked')) {
     score.innerHTML = 'No rating?';
   }
+
+  /* test */
+  /* setTimeout(() => {
+    rating.classList.remove('rating--sh');
+    score.innerHTML = `You selected <span id="rate-msg"></span> out of 5`;
+    ratingBtns.forEach((ratingBtn) => {
+      ratingBtn.classList.remove('checked');
+      ratingMsg.innerHTML = ratingBtn.innerHTML;
+    });
+  }, 8000); */
 });
 
 ratingBtns.forEach((ratingBtn) => {
