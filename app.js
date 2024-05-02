@@ -16,14 +16,13 @@ btn.addEventListener('click', () => {
   }
 
   /* test */
-  /* setTimeout(() => {
+  setTimeout(() => {
     rating.classList.remove('rating--sh');
-    score.innerHTML = `You selected <span id="rate-msg"></span> out of 5`;
+    /* score.innerHTML = `You selected <span id="rate-msg">${ratingMsg.innerHTML}</span> out of 5`; */
     ratingBtns.forEach((ratingBtn) => {
       ratingBtn.classList.remove('checked');
-      ratingMsg.innerHTML = ratingBtn.innerHTML;
     });
-  }, 8000); */
+  }, 8000);
 });
 
 ratingBtns.forEach((ratingBtn) => {
@@ -31,5 +30,6 @@ ratingBtns.forEach((ratingBtn) => {
     document.querySelector('.checked')?.classList.remove('checked');
     ratingBtn.classList.add('checked');
     ratingMsg.innerHTML = ratingBtn.innerHTML;
+    score.innerHTML = `You selected <span id="rate-msg">${ratingMsg.innerHTML}</span> out of 5`;
   });
 });

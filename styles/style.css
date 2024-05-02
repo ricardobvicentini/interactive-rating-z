@@ -152,7 +152,7 @@ body {
 }
 
 .rate-btn:hover,
-.rate-btn:focus {
+.rate-btn:focus-visible {
   background-color: var(--orange);
   color: var(--white);
 }
@@ -174,7 +174,7 @@ body {
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus-visible {
   background-color: var(--white);
   color: var(--orange);
 }
